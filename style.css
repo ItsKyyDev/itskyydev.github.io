@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(bekgron.gif) no-repeat center center fixed;
+    background: #000 url(bekgron.gif) no-repeat center center fixed;
     background-size: cover;
     font-family: 'Century Gothic', sans-serif;
     display: flex;
@@ -20,8 +20,9 @@ body {
     text-align: center;
     color: rgb(184, 186, 224);
     border-radius: 15px;
+    border: 3px solid white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    animation: rgb-glow 5s infinite alternate;
+    animation: rgb-cycle 5s infinite alternate;
 }
 
 /* Profil */
@@ -31,7 +32,7 @@ body {
     height: 150px;
     object-fit: cover;
     border: 3px solid white;
-    animation: rgb-border 5s infinite alternate;
+    animation: rgb-cycle 5s infinite alternate;
 }
 
 /* Nama */
@@ -40,29 +41,7 @@ body {
     letter-spacing: 3px;
     font-weight: 600;
     color: white;
-    text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green;
-    animation: rgb-text-shadow 3s infinite alternate;
-}
-
-/* Animasi teks RGB */
-@keyframes rgb-text-shadow {
-    0% { text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green; }
-    50% { text-shadow: 0 0 5px blue, 0 0 10px green, 0 0 15px red; }
-    100% { text-shadow: 0 0 5px green, 0 0 10px red, 0 0 15px blue; }
-}
-
-/* Animasi border RGB */
-@keyframes rgb-border {
-    0% { border-color: red; }
-    50% { border-color: blue; }
-    100% { border-color: green; }
-}
-
-/* Animasi box glow */
-@keyframes rgb-glow {
-    0% { box-shadow: 0 0 10px red; }
-    50% { box-shadow: 0 0 10px blue; }
-    100% { box-shadow: 0 0 10px green; }
+    animation: rgb-cycle 5s infinite alternate;
 }
 
 /* Sosmed */
@@ -86,13 +65,7 @@ body {
 
 .social-icons li a:hover {
     transform: scale(1.2);
-    animation: rgb-hover 1.5s infinite alternate;
-}
-
-@keyframes rgb-hover {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: green; }
+    animation: rgb-cycle 1.5s infinite alternate;
 }
 
 /* Responsive Design */
@@ -124,7 +97,15 @@ body {
     font-size: 22px;
     transition: 0.3s;
     z-index: 999;
+    animation: rgb-cycle 5s infinite alternate;
 }
 #audio-toggle:hover {
     background: rgba(255,255,255,0.2);
+}
+
+/* Sinkronisasi animasi RGB */
+@keyframes rgb-cycle {
+    0% { color: red; border-color: red; box-shadow: 0 0 10px red; }
+    50% { color: blue; border-color: blue; box-shadow: 0 0 10px blue; }
+    100% { color: green; border-color: green; box-shadow: 0 0 10px green; }
 }
