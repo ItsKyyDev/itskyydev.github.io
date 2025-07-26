@@ -24,7 +24,7 @@ body {
     animation: rgb-glow 5s infinite alternate;
 }
 
-/* Profil */
+/* Profil ndog 1 */
 .box-img {
     border-radius: 50%;
     width: 150px;
@@ -34,7 +34,7 @@ body {
     animation: rgb-border 5s infinite alternate;
 }
 
-/* Nama */
+/* ndukuran e */
 .box h1 {
     font-size: 32px;
     letter-spacing: 3px;
@@ -44,28 +44,25 @@ body {
     animation: rgb-text-shadow 3s infinite alternate;
 }
 
-/* Animasi teks RGB */
 @keyframes rgb-text-shadow {
     0% { text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px green; }
     50% { text-shadow: 0 0 5px blue, 0 0 10px green, 0 0 15px red; }
     100% { text-shadow: 0 0 5px green, 0 0 10px red, 0 0 15px blue; }
 }
 
-/* Animasi border RGB */
 @keyframes rgb-border {
     0% { border-color: red; }
     50% { border-color: blue; }
     100% { border-color: green; }
 }
 
-/* Animasi box glow */
 @keyframes rgb-glow {
     0% { box-shadow: 0 0 10px red; }
     50% { box-shadow: 0 0 10px blue; }
     100% { box-shadow: 0 0 10px green; }
 }
 
-/* Sosmed */
+/* sosmed anjeng */
 .social-icons {
     margin-top: 15px;
     padding: 0;
@@ -109,22 +106,4 @@ body {
     .social-icons li a {
         font-size: 25px;
     }
-}
-
-/* Tombol audio toggle */
-#audio-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 10px 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    color: white;
-    font-size: 22px;
-    transition: 0.3s;
-    z-index: 999;
-}
-#audio-toggle:hover {
-    background: rgba(255,255,255,0.2);
 }
