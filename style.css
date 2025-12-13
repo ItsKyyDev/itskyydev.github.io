@@ -107,3 +107,48 @@ body {
         font-size: 25px;
     }
 }
+
+/* Portfolio */
+.portfolio-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Portfolio Button RGB Version */
+.portfolio-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background: rgba(8, 3, 31, 0.35);
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    letter-spacing: 2px;
+
+    /* Border RGB seperti elemen lain */
+    border: 2px solid red;
+    animation: rgb-border 4s infinite alternate;
+    transition: 0.3s ease;
+    text-shadow: 0 0 6px red, 0 0 10px blue, 0 0 14px green;
+    animation: rgb-text-shadow 3s infinite alternate;
+}
+
+.portfolio-btn:hover {
+    transform: scale(1.07);
+    background: rgba(255,255,255,0.15);
+}
